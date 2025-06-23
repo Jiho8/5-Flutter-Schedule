@@ -1,5 +1,5 @@
 
-![썸네일목업_1](https://github.com/user-attachments/assets/d43399a0-c906-4c4c-afe8-534ab4fe4f03)
+![img-thumb-02](https://github.com/user-attachments/assets/6df05059-99ba-4e73-8455-a2e479bc4763)
 
 ## 📢 소개
 사용자가 직접 밸런스 게임을 만들고, 다른 사람들과 함께 즐길 수 있는 SPA 웹사이트, <b>"Doody"</b> 입니다. <br>
