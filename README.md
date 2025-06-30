@@ -1,5 +1,5 @@
 
-![썸네일목업_1](https://github.com/user-attachments/assets/d43399a0-c906-4c4c-afe8-534ab4fe4f03)
+![img-thumb-02](https://github.com/user-attachments/assets/6df05059-99ba-4e73-8455-a2e479bc4763)
 
 ## 📢 소개
 Monzi는 Flutter로 제작된 일정 관리 웹입니다. <br>
