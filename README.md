@@ -157,7 +157,7 @@ Monzi는 Flutter로 제작된 일정 관리 웹입니다. <br>
 - 원인: `scale` 값은 `RxDouble`로 상태가 관리되지만, 이를 적용하려면 모든 `Text` 위젯을 `Obx`로 감싸야 함
   -> 코드량 증가 -> 유지보수 난이도 상승
 - **해결**:
-  -> 공통 텍스트 스타일을 관리하는 `AppTextStyles` 클래스 생성
-  -> 클래스 내부에 `RxDouble scale` 변수를 선언하고, 각 스타일을 `getter`로 구성
-  -> 텍스트 크기 조절은 슬라이더에서 `scale.value`를 변경하는 방식으로 통합 처리
+  1) 공통 텍스트 스타일을 관리하는 `AppTextStyles` 클래스 생성
+  2) 클래스 내부에 `RxDouble scale` 변수를 선언하고, 각 스타일을 `getter`로 구성
+  3) 텍스트 크기 조절은 슬라이더에서 `scale.value`를 변경하는 방식으로 통합 처리
 
