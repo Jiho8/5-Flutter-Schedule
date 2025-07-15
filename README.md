@@ -2,14 +2,11 @@
 ![img-thumb-02](https://github.com/user-attachments/assets/6df05059-99ba-4e73-8455-a2e479bc4763)
 
 ## 📢 소개
-Monzi는 Flutter로 제작된 일정 관리 웹입니다. <br>
-캘린더를 통해 나만의 일정을 쉽게 추가하고, 월별 일정을 한눈에 확인할 수 있습니다. <br>
+Monzi는 **Flutter로 제작된 일정 관리 웹**입니다. <br>
+사용자가 캘린더를 통해 쉽고 직관적으로 일정을 추가하고 관리하며, 월별 일정을 한눈에 파악할 수 있도록 돕는 데 중점을 두었습니다. <br>
 
-원하는 날짜에 메모와 함께 일정 등록 및 삭제가 가능하며, <br>
-먼슬리 페이지에서는 이번 달 일정이 리스트 형태로 표시하여 가독성을 높였습니다. <br>
-또한 지난 일정은 회색 컬러로 표시되어 UX를 고려하였습니다. <br>
-
-모바일(최대 480px) 환경에 최적화되어, 스마트폰에서도 쾌적하게 사용할 수 있습니다.
+Hive를 활용한 로컬 데이터 저장으로 안정적인 일정 관리를 제공하며, <br>
+모바일(최대 480px) 환경에 최적화된 반응형 UI로 스마트폰에서도 쾌적한 사용 경험을 선사합니다.
 
 ## 🔗 배포 URL
 * 사이트: https://monzi.vercel.app
@@ -23,13 +20,13 @@ Monzi는 Flutter로 제작된 일정 관리 웹입니다. <br>
 
 ### 2. 목표
 
-* 사용자가 캘린더를 통해 일정을 등록하고, 삭제할 수 있다.
-* 내가 작성한 일정을 한 눈에 모아볼 수 있다.
+* 사용자가 캘린더를 통해 직관적으로 일정을 등록, 확인 및 삭제할 수 있도록 한다.
+* 등록된 월별 일정을 한눈에 모아보고 가독성 높게 파악할 수 있는 UI를 제공하여 일정 관리 편의성을 극대화한다.
 
 ### 3. 주요 기능
 
-* 캘린더 UI
-* 일정 등록 및 삭제
+* 캘린더 기반 일정 관리
+* 일정 추가 및 삭제
 * 월간 일정 리스트
 
 ### 4. 주요 기술 스택
@@ -84,12 +81,12 @@ Monzi는 Flutter로 제작된 일정 관리 웹입니다. <br>
 | **Flutter** | **앱 전체 UI 프레임워크** |![Flutter](https://img.shields.io/badge/Flutter-%2302569B.svg?style=flat-square&logo=Flutter&logoColor=white)|
 | **Dart** | **Flutter 기본 언어** |![Dart](https://img.shields.io/badge/Dart-0175C2?style=flat-square&logo=dart&logoColor=white)|
 | **Hive** | **Local DB 저장** | ![Hive](https://img.shields.io/badge/Hive-2.2.3-yellow?style=flat-square&logo=https://raw.githubusercontent.com/hivedb/hive/master/.github/logo_transparent.svg&logoColor=white)|
+| **GetX** | **라우팅 & 상태 관리 프레임워크** |![GetX](https://img.shields.io/badge/GetX-8A2BE2?style=flat-square&logo=getx&logoColor=white")|
 
 ### 2. UI/UX 라이브러리
 
 | 사용기술 | 설명 | Badge |
 | :---:| :---: | :---: |
-| **GetX** | **라우팅 & 상태 관리 프레임워크** |![GetX](https://img.shields.io/badge/GetX-8A2BE2?style=flat-square&logo=getx&logoColor=white")|
 | **table_calendar** | **캘린더 지원** |![tableCalendar](https://img.shields.io/badge/table_calendar-blue?style=flat-square)|
 
 ### 3. 개발 도구
@@ -97,7 +94,7 @@ Monzi는 Flutter로 제작된 일정 관리 웹입니다. <br>
 |사용기술 | 설명 | Badge | 
 | :---:| :---: | :---: |
 | **Visual Studio Code (VS Code)** | **코드 편집기 (에디터)** |![VSCode](https://img.shields.io/badge/VSCode-007ACC?style=flat-square&logo=data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTI0LjAwMyAyTDEyIDEzLjMwM0w0Ljg0IDhMMiAxMEw4Ljc3MiAxNkwyIDIyTDQuODQgMjRMMTIgMTguNzAyTDI0LjAwMyAzMEwzMCAyNy4wODdWNC45MTNMMjQuMDAzIDJaTTI0IDkuNDM0VjIyLjU2NkwxNS4yODkgMTZMMjQgOS40MzRaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K&logoColor=white) |
-|**GitHub** | **버전 관리** |![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white)| 
+| **GitHub** | **버전 관리** |![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white)| 
 | **Vercel** | **서버리스 플랫폼** |![vercel](https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white)|
 | **Figma** | **디자인 & UI/UX**|![Figma](https://img.shields.io/badge/Figma-F24E1E?style=flat-square&logo=Figma&logoColor=white) |
 
