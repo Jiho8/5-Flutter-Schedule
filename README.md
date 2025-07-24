@@ -105,7 +105,7 @@ Hive를 활용한 로컬 데이터 저장으로 안정적인 일정 관리를 �
 | **Figma** | **디자인 & UI/UX**|![Figma](https://img.shields.io/badge/Figma-F24E1E?style=flat-square&logo=Figma&logoColor=white) |
 
 ## 📚 참고 URL
-- [기획 및 화면 설계](https://www.figma.com/design/KNGUa6baNsOlnvCgD5Hbfs/3rd_project_Monzi?node-id=1-5097&t=0RZwGLr5hBWLWTjR-1)
+- 기획 및 화면 설계 : [먼지_figma](https://www.figma.com/design/KNGUa6baNsOlnvCgD5Hbfs/3rd_project_Monzi?node-id=1-5097&t=0RZwGLr5hBWLWTjR-1)
 
 <hr>
 
