@@ -23,8 +23,6 @@ class _MyWidgetState extends State<CalendarPage> {
   }
 
   final formKey = GlobalKey<FormState>(); // form의 고유key값을 만듦
-  String? sTitle;
-  String? sContent;
 
   @override
   Widget build(BuildContext context) {
@@ -134,6 +132,9 @@ class _MyWidgetState extends State<CalendarPage> {
 
   // 일정 추가 팝업
   void addForm(context) {
+    final titleController = TextEditingController();
+    final contentController = TextEditingController();
+
     showModalBottomSheet(
       backgroundColor: Colors.white,
       context: context,
@@ -148,6 +149,7 @@ class _MyWidgetState extends State<CalendarPage> {
                 child: Column(
                   children: [
                     TextFormField(
+                      controller: titleController,
                       // validator 같은 속성을 이용하여 유효성 검사를 진행
                       // 검증이 잘 되면 null을 보내줌
                       validator: (value) {
@@ -170,14 +172,10 @@ class _MyWidgetState extends State<CalendarPage> {
                           fontSize: 14,
                         ),
                       ),
-
-                      // button 클릭 시 입력한 title값을 value에 저장.
-                      onSaved: (value) {
-                        sTitle = value;
-                      },
                     ),
                     SizedBox(height: 15),
                     TextFormField(
+                      controller: contentController,
                       // validator: (value) => null,
                       decoration: InputDecoration(
                         labelText: 'Memo',
@@ -192,10 +190,6 @@ class _MyWidgetState extends State<CalendarPage> {
                           fontSize: 14,
                         ),
                       ),
-
-                      onSaved: (value) {
-                        sContent = value;
-                      },
                     ),
                     SizedBox(height: 50),
                   ],
@@ -205,11 +199,16 @@ class _MyWidgetState extends State<CalendarPage> {
                 onPressed: () {
                   // 조건문을 통해 값이 입력되었는지 확인
                   if (formKey.currentState!.validate()) {
-                    // '!': save라는 것이 틀림없이 존재한다..? 나중에라도 존재할 수 있다.
-                    formKey.currentState!.save();
+                    // 일정 추가
+                    controller.addSchedule(
+                      titleController.text,
+                      contentController.text,
+                    );
 
-                    // schedule
-                    controller.addSchedule(sTitle!, sContent);
+                    // 입력값 초기화
+                    titleController.clear();
+                    contentController.clear();
+
                     Navigator.pop(context);
                   }
                 },

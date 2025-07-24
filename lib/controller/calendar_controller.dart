@@ -30,9 +30,13 @@ class ScheduleController extends GetxController {
       defaultValue: [],
     ); // defaultValue: 저장된 값이 없을 때 가져올 값
 
+    final safeList = (getBoxValue as List)
+        .map<Map<String, dynamic>>((e) => Map<String, dynamic>.from(e as Map))
+        .toList();
+
     // list: get이라는 package를 이용하고 있는 변수.
     // assignAll: 배열의 형태로 변환?
-    list.assignAll(List.from(getBoxValue));
+    list.assignAll(safeList);
     allSchedule();
   }
 
@@ -48,21 +52,34 @@ class ScheduleController extends GetxController {
 
   // 일정 추가
   void addSchedule(String t, String? c) {
-    var item = {'title': t, 'content': c, 'time': DateTime.now()};
-    list.add(item);
-    saveSchedule();
+    final now = DateTime.now();
+    final key =
+        '${selectedDate.value.year}-${selectedDate.value.month}-${selectedDate.value.day}';
+
+    var newItem = {'title': t, 'content': c, 'time': now.toIso8601String()};
+
+    final oldList = box.get(key, defaultValue: []) as List;
+    final newList = oldList
+        .map((e) => Map<String, dynamic>.from(e as Map))
+        .toList(); // 복사해서 새 리스트 생성
+
+    newList.add(newItem);
+
+    box.put(key, newList);
+
+    list.add(newItem);
+    list.refresh(); // UI 갱신
   }
 
   // 일정 삭제
-  void deletedSchedule(DateTime n) {
+  void deletedSchedule(String isoTime) {
     // removeWhere: 해당 아이템을 찾아서 지움.
-    list.removeWhere((item) => item['time'] == n);
+    list.removeWhere((item) => item['time'] == isoTime);
     saveSchedule();
   }
 
   void changeDate(day) {
     selectedDate.value = day; // getx package가 날짜를 가질 때는 value에 저장됨
-    // print(selectedDate);
   }
 
   // 모든 일정 가져오기
